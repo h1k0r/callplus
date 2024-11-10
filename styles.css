@@ -1,0 +1,68 @@
+/* CSS Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Applying animations */
+.fade-in { animation: fadeIn 2s ease-out; }
+.bounce { animation: bounce 2s infinite; }
+.slide-in-left { animation: slideInLeft 1s ease-out; }
+.slide-in-right { animation: slideInRight 1s ease-out; }
+.zoom-in { animation: zoomIn 1.5s ease-out; }
+
+/* Additional styling for aesthetic improvements */
+.hero {
+    background: linear-gradient(135deg, #0093E9, #80D0C7);
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    color: #fff;
+    background: #ff4757;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: #ff6b81;
+}
+
+.section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
