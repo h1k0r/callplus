@@ -37,11 +37,14 @@ export default function Blog() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-600 mb-6">
+            <span className="text-sm font-medium">Expert Knowledge Base</span>
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold text-[#1E293B]">
-            Latest Insights
+            Latest Insights & Industry Trends
           </h2>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-            Stay updated with the latest trends and insights in call center technology
+            Stay updated with the latest trends and best practices in call center technology and auto dialer solutions
           </p>
         </motion.div>
 
@@ -56,14 +59,14 @@ export default function Blog() {
               whileHover={{ y: -5 }}
               className="transform transition-all duration-300"
             >
-              <Card className="h-full hover:shadow-lg">
+              <Card className="h-full hover:shadow-lg border-2 border-transparent hover:border-[#2563EB]/10 bg-white/50 backdrop-blur-sm group">
                 <CardHeader>
                   <div className="flex items-center gap-2 text-sm text-gray-500 mb-2">
                     <span>{post.category}</span>
                     <span>•</span>
                     <span>{post.readTime}</span>
                   </div>
-                  <CardTitle className="text-xl mb-2 line-clamp-2">
+                  <CardTitle className="text-xl mb-2 line-clamp-2 group-hover:text-[#2563EB] transition-colors duration-300">
                     {post.title}
                   </CardTitle>
                   <CardDescription className="line-clamp-3">
@@ -71,8 +74,11 @@ export default function Blog() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Button variant="link" className="p-0 h-auto text-[#2563EB] hover:no-underline gap-2">
-                    Read More
+                  <Button 
+                    variant="link" 
+                    className="p-0 h-auto text-[#2563EB] hover:no-underline gap-2 group-hover:translate-x-1 transition-transform duration-300"
+                  >
+                    Read Article
                     <ArrowRight className="h-4 w-4" />
                   </Button>
                 </CardContent>
@@ -88,7 +94,11 @@ export default function Blog() {
           transition={{ delay: 0.4 }}
           className="mt-12 text-center"
         >
-          <Button size="lg" variant="outline" className="border-[#2563EB] text-[#2563EB]">
+          <Button 
+            size="lg" 
+            variant="outline" 
+            className="border-[#2563EB] text-[#2563EB] hover:bg-[#2563EB]/5"
+          >
             View All Articles
           </Button>
         </motion.div>
