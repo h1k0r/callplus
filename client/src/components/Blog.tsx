@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
+import { Link } from "wouter";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BarChart2 } from "lucide-react";
 
 const blogPosts = [
   {
+    slug: "callplus-auto-dialer-future",
     title: "CallPlus Auto Dialer: The Future of Call Center Technology in India",
     description: "Discover how CallPlus's AI-powered predictive dialing technology is revolutionizing Indian call centers with 300% increased efficiency.",
     category: "Product Features",
@@ -12,6 +14,7 @@ const blogPosts = [
     readTime: "5 min read",
   },
   {
+    slug: "maximizing-roi-multilanguage",
     title: "Maximizing ROI with CallPlus's Multi-Language Support",
     description: "Learn how our advanced multi-language IVR system helps businesses connect with customers across different Indian states effectively.",
     category: "Case Study",
@@ -19,6 +22,7 @@ const blogPosts = [
     readTime: "7 min read",
   },
   {
+    slug: "advanced-call-analytics",
     title: "Advanced Call Analytics: Transform Your Decision Making",
     description: "Explore CallPlus's real-time analytics and AI-powered insights that help optimize your call center operations and agent performance.",
     category: "Technology",
@@ -38,6 +42,7 @@ export default function Blog() {
           className="text-center mb-12"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-600 mb-6">
+            <BarChart2 className="h-4 w-4" />
             <span className="text-sm font-medium">CallPlus Insights</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-[#1E293B]">
@@ -74,13 +79,15 @@ export default function Blog() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Button 
-                    variant="link" 
-                    className="p-0 h-auto text-[#2563EB] hover:no-underline gap-2 group-hover:translate-x-1 transition-transform duration-300"
-                  >
-                    Read Full Article
-                    <ArrowRight className="h-4 w-4" />
-                  </Button>
+                  <Link href={`/blog/${post.slug}`}>
+                    <Button 
+                      variant="link" 
+                      className="p-0 h-auto text-[#2563EB] hover:no-underline gap-2 group-hover:translate-x-1 transition-transform duration-300"
+                    >
+                      Read Full Article
+                      <ArrowRight className="h-4 w-4" />
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             </motion.div>
@@ -92,15 +99,16 @@ export default function Blog() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="mt-12 text-center"
+          className="mt-12 text-center space-y-4"
         >
-          <Button 
-            size="lg" 
-            variant="outline" 
-            className="border-[#2563EB] text-[#2563EB] hover:bg-[#2563EB]/5"
-          >
-            Explore All Articles
-          </Button>
+          <Link href="/reports">
+            <Button 
+              size="lg" 
+              className="bg-[#2563EB] hover:bg-[#2563EB]/90 hover:scale-105 transform transition-all duration-300"
+            >
+              Download Market Reports
+            </Button>
+          </Link>
         </motion.div>
       </div>
     </section>
