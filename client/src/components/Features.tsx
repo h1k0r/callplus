@@ -15,7 +15,7 @@ const featureCategories = [
     features: [
       {
         title: "Predictive Dialing",
-        description: "AI-based smart dialer maximizing agent talk time",
+        description: "AI-based smart dialer maximizing agent talk time.",
         icon: PhoneCall,
       },
       {
@@ -118,7 +118,7 @@ const featureCategories = [
 
 export default function Features() {
   return (
-    <section id="features" className="py-16 md:py-24 px-6 bg-white">
+    <section id="features" className="py-16 md:py-24 px-6 bg-gradient-to-b from-white to-blue-50/30">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -126,6 +126,10 @@ export default function Features() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-600 mb-6">
+            <Settings className="h-4 w-4" />
+            <span className="text-sm font-medium">Feature-Rich Platform</span>
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold text-[#1E293B]">
             Industry-Leading Features
           </h2>
@@ -134,7 +138,7 @@ export default function Features() {
           </p>
         </motion.div>
 
-        <div className="space-y-16">
+        <div className="space-y-24">
           {featureCategories.map((category, categoryIndex) => (
             <motion.div
               key={categoryIndex}
@@ -142,12 +146,14 @@ export default function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: categoryIndex * 0.1 }}
+              className="relative"
             >
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-[#1E293B] mb-2">{category.title}</h3>
-                <p className="text-gray-600">{category.description}</p>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-50/50 via-transparent to-blue-50/50 -skew-y-3 transform -z-10" />
+              <div className="text-center mb-12">
+                <h3 className="text-2xl md:text-3xl font-bold text-[#1E293B] mb-3">{category.title}</h3>
+                <p className="text-gray-600 max-w-2xl mx-auto">{category.description}</p>
               </div>
-              <div className="grid md:grid-cols-3 gap-6">
+              <div className="grid md:grid-cols-3 gap-8">
                 {category.features.map((feature, featureIndex) => (
                   <motion.div
                     key={featureIndex}
@@ -158,13 +164,17 @@ export default function Features() {
                     whileHover={{ scale: 1.03 }}
                     className="transform transition-all duration-300"
                   >
-                    <Card className="h-full hover:shadow-lg border-2 border-transparent hover:border-[#2563EB]/10 bg-white/50 backdrop-blur-sm">
+                    <Card className="h-full hover:shadow-lg border-2 border-transparent hover:border-[#2563EB]/10 bg-white/50 backdrop-blur-sm group">
                       <CardHeader>
-                        <div className="h-12 w-12 rounded-lg bg-[#2563EB]/10 flex items-center justify-center mb-4">
-                          <feature.icon className="h-6 w-6 text-[#2563EB]" />
+                        <div className="h-12 w-12 rounded-lg bg-[#2563EB]/10 flex items-center justify-center mb-4 group-hover:bg-[#2563EB] transition-colors duration-300">
+                          <feature.icon className="h-6 w-6 text-[#2563EB] group-hover:text-white transition-colors duration-300" />
                         </div>
-                        <CardTitle className="mb-2">{feature.title}</CardTitle>
-                        <CardDescription>{feature.description}</CardDescription>
+                        <CardTitle className="mb-2 group-hover:text-[#2563EB] transition-colors duration-300">
+                          {feature.title}
+                        </CardTitle>
+                        <CardDescription className="text-gray-600">
+                          {feature.description}
+                        </CardDescription>
                       </CardHeader>
                     </Card>
                   </motion.div>
