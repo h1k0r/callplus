@@ -2,7 +2,9 @@ import { motion } from "framer-motion";
 import {
   PhoneCall, BarChart, Clock, Users, Shield, Zap,
   Brain, Database, LineChart, Headphones, Globe,
-  MessageSquare, Lock, Webhook, Languages, Bot
+  MessageSquare, Lock, Webhook, Languages, Bot,
+  BarChart2, Mic, Gauge, Phone, ListChecks,
+  Settings, Network, Blocks, FileText, Cloud
 } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
@@ -70,31 +72,67 @@ const featureCategories = [
       },
     ],
   },
+  {
+    title: "Call Quality & Monitoring",
+    description: "Ensure the highest standards of call quality",
+    features: [
+      {
+        title: "Live Call Monitoring",
+        description: "Real-time agent and call status monitoring",
+        icon: Headphones,
+      },
+      {
+        title: "Quality Scoring",
+        description: "AI-generated feedback for every call",
+        icon: BarChart2,
+      },
+      {
+        title: "Voice Recording",
+        description: "Automatic call recording and storage",
+        icon: Mic,
+      },
+    ],
+  },
+  {
+    title: "Performance & Security",
+    description: "Enterprise-grade reliability and protection",
+    features: [
+      {
+        title: "High Performance",
+        description: "Handle thousands of calls simultaneously",
+        icon: Gauge,
+      },
+      {
+        title: "Secure Infrastructure",
+        description: "TLS/SRTP encryption for all calls",
+        icon: Shield,
+      },
+      {
+        title: "Compliance Ready",
+        description: "GDPR & NDNC compliance handling",
+        icon: ListChecks,
+      },
+    ],
+  },
 ];
 
 export default function Features() {
   return (
     <section id="features" className="py-16 md:py-24 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-[#1E293B]"
-          >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-[#1E293B]">
             Industry-Leading Features
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto"
-          >
-            Discover why CallPlus is the most advanced auto dialer solution in India
-          </motion.p>
-        </div>
+          </h2>
+          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+            Discover why CallPlus is India's most advanced auto dialer solution
+          </p>
+        </motion.div>
 
         <div className="space-y-16">
           {featureCategories.map((category, categoryIndex) => (
@@ -103,7 +141,7 @@ export default function Features() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: categoryIndex * 0.2 }}
+              transition={{ delay: categoryIndex * 0.1 }}
             >
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-[#1E293B] mb-2">{category.title}</h3>
@@ -116,11 +154,11 @@ export default function Features() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: (categoryIndex * 0.2) + (featureIndex * 0.1) }}
-                    whileHover={{ scale: 1.05 }}
+                    transition={{ delay: (categoryIndex * 0.1) + (featureIndex * 0.05) }}
+                    whileHover={{ scale: 1.03 }}
                     className="transform transition-all duration-300"
                   >
-                    <Card className="h-full hover:shadow-lg border-2 border-transparent hover:border-[#2563EB]/10">
+                    <Card className="h-full hover:shadow-lg border-2 border-transparent hover:border-[#2563EB]/10 bg-white/50 backdrop-blur-sm">
                       <CardHeader>
                         <div className="h-12 w-12 rounded-lg bg-[#2563EB]/10 flex items-center justify-center mb-4">
                           <feature.icon className="h-6 w-6 text-[#2563EB]" />
