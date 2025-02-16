@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { motion } from "framer-motion";
+import { FaPhone, FaEnvelope } from 'react-icons/fa';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -22,6 +23,20 @@ export default function Footer() {
             <p className="mt-4 text-gray-600 max-w-xs">
               Transform your call center operations with our intelligent auto-dialer solution.
             </p>
+            <div className="mt-6 space-y-2">
+              <div className="flex items-center gap-2 text-gray-600">
+                <FaPhone className="h-4 w-4 text-[#2563EB]" />
+                <span>+91 8406831511</span>
+              </div>
+              <div className="flex items-center gap-2 text-gray-600">
+                <FaPhone className="h-4 w-4 text-[#2563EB]" />
+                <span>+91 6207123633</span>
+              </div>
+              <div className="flex items-center gap-2 text-gray-600">
+                <FaEnvelope className="h-4 w-4 text-[#2563EB]" />
+                <span>callplus.in@gmail.com</span>
+              </div>
+            </div>
           </motion.div>
 
           <motion.div

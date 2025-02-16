@@ -18,7 +18,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-8">
             <Link href="/">
-              <motion.div 
+              <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="text-2xl font-bold text-[#2563EB] cursor-pointer"
               >
@@ -63,43 +63,46 @@ export default function Navbar() {
         </div>
       </div>
 
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="md:hidden"
-        >
-          <div className="px-4 pt-2 pb-3 space-y-1 bg-white border-b">
-            <div className="px-3 py-2 space-y-2">
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <Phone className="h-4 w-4 text-[#2563EB]" />
-                <span>+91 8406831511</span>
+      <div className="md:hidden">
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="absolute left-0 right-0 bg-white border-b shadow-lg"
+          >
+            <div className="px-6 py-4 space-y-4">
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-sm text-gray-600">
+                  <Phone className="h-4 w-4 text-[#2563EB]" />
+                  <span>+91 8406831511</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-600">
+                  <Phone className="h-4 w-4 text-[#2563EB]" />
+                  <span>+91 6207123633</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-600">
+                  <Mail className="h-4 w-4 text-[#2563EB]" />
+                  <span>callplus.in@gmail.com</span>
+                </div>
               </div>
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <Phone className="h-4 w-4 text-[#2563EB]" />
-                <span>+91 6207123633</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <Mail className="h-4 w-4 text-[#2563EB]" />
-                <span>callplus.in@gmail.com</span>
+
+              <div className="space-y-2">
+                {links.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="block py-2 text-[#1E293B] hover:text-[#2563EB] transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+                <Button className="w-full mt-4">Get Started</Button>
               </div>
             </div>
-            {links.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="block px-3 py-2 text-base font-medium text-[#1E293B] hover:text-[#2563EB]"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.label}
-              </a>
-            ))}
-            <div className="px-3 py-2">
-              <Button className="w-full">Get Started</Button>
-            </div>
-          </div>
-        </motion.div>
-      )}
+          </motion.div>
+        )}
+      </div>
     </nav>
   );
 }
