@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section text-center py-5 mb-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <h1 class="display-4 fw-bold mb-4">Leading Call Center Software Solution | CallPlus Dialer</h1>
+                <p class="lead mb-4">Transform your call center operations with our AI-powered predictive dialing solution. Boost productivity by 40% and enhance customer engagement with advanced CRM integration.</p>
+                <!-- SEO-optimized keywords -->
+                <div class="d-none">
+                    <h2>Features: #PredictiveDialer #CRMIntegration #CloudDialer</h2>
+                    <h2>Solutions: #CallCenterSoftware #BusinessSolutions #SalesAutomation</h2>
+                </div>
+                <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg me-3">Request Demo</a>
+                <a href="{{ url_for('features') }}" class="btn btn-outline-secondary btn-lg">Learn More</a>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <i class="fas fa-headset display-1 text-primary"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Key Features</h2>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <i class="fas fa-phone-volume fa-2x text-primary mb-3"></i>
+                        <h5 class="card-title">Smart Dialing Modes</h5>
+                        <p class="card-text">Choose from Predictive, Progressive, Preview, and Manual dialing modes to optimize your calling strategy.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <i class="fas fa-chart-line fa-2x text-primary mb-3"></i>
+                        <h5 class="card-title">Real-Time Analytics</h5>
+                        <p class="card-text">Monitor performance metrics and generate comprehensive reports in real-time.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <i class="fas fa-plug fa-2x text-primary mb-3"></i>
+                        <h5 class="card-title">CRM Integration</h5>
+                        <p class="card-text">Seamlessly integrate with your existing CRM system for enhanced workflow efficiency.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">What Our Clients Say</h2>
+        <div class="row">
+            <div class="col-md-6" data-aos="fade-right">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <p class="card-text">"CallPlus Dialer has transformed our call center operations. Our productivity has increased by 40% since implementation."</p>
+                        <footer class="blockquote-footer">John Smith, Call Center Manager</footer>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-left">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <p class="card-text">"The smart dialing modes and analytics have helped us optimize our campaigns effectively."</p>
+                        <footer class="blockquote-footer">Sarah Johnson, Operations Director</footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section text-center py-5">
+    <div class="container">
+        <h2 class="mb-4" data-aos="fade-up">Ready to Transform Your Calling Experience?</h2>
+        <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="100">Get Started Today</a>
+    </div>
+</section>
+{% endblock %}

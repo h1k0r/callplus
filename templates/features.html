@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}Features{% endblock %}
+
+{% block content %}
+<section class="features-header py-5 text-center">
+    <div class="container">
+        <h1 class="display-4 mb-4" data-aos="fade-up">Powerful Features</h1>
+        <p class="lead" data-aos="fade-up" data-aos-delay="100">Discover the comprehensive set of features that make CallPlus Dialer the perfect solution for your business.</p>
+    </div>
+</section>
+
+<section class="features-detail py-5">
+    <div class="container">
+        <!-- Dialing Modes -->
+        <div class="row mb-5 align-items-center" data-aos="fade-up">
+            <div class="col-md-6">
+                <h3>Advanced Dialing Modes</h3>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-check text-primary me-2"></i> Predictive Dialing</li>
+                    <li><i class="fas fa-check text-primary me-2"></i> Progressive Dialing</li>
+                    <li><i class="fas fa-check text-primary me-2"></i> Preview Dialing</li>
+                    <li><i class="fas fa-check text-primary me-2"></i> Manual Dialing</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <i class="fas fa-phone-volume display-1 text-primary"></i>
+            </div>
+        </div>
+
+        <!-- Call Management -->
+        <div class="row mb-5 align-items-center" data-aos="fade-up">
+            <div class="col-md-6 order-md-2">
+                <h3>Call Management</h3>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-check text-primary me-2"></i> Real-time Monitoring</li>
+                    <li><i class="fas fa-check text-primary me-2"></i> Call Recording</li>
+                    <li><i class="fas fa-check text-primary me-2"></i> Quality Assurance Tools</li>
+                    <li><i class="fas fa-check text-primary me-2"></i> Call Transfer & Conference</li>
+                </ul>
+            </div>
+            <div class="col-md-6 order-md-1">
+                <i class="fas fa-tasks display-1 text-primary"></i>
+            </div>
+        </div>
+
+        <!-- Reporting & Analytics -->
+        <div class="row mb-5 align-items-center" data-aos="fade-up">
+            <div class="col-md-6">
+                <h3>Reporting & Analytics</h3>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-check text-primary me-2"></i> Real-time Dashboards</li>
+                    <li><i class="fas fa-check text-primary me-2"></i> Custom Reports</li>
+                    <li><i class="fas fa-check text-primary me-2"></i> Performance Metrics</li>
+                    <li><i class="fas fa-check text-primary me-2"></i> Export Capabilities</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <i class="fas fa-chart-bar display-1 text-primary"></i>
+            </div>
+        </div>
+
+        <!-- Integration -->
+        <div class="row mb-5 align-items-center" data-aos="fade-up">
+            <div class="col-md-6 order-md-2">
+                <h3>Integration Capabilities</h3>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-check text-primary me-2"></i> CRM Integration</li>
+                    <li><i class="fas fa-check text-primary me-2"></i> API Access</li>
+                    <li><i class="fas fa-check text-primary me-2"></i> Third-party Tools</li>
+                    <li><i class="fas fa-check text-primary me-2"></i> Custom Integration Options</li>
+                </ul>
+            </div>
+            <div class="col-md-6 order-md-1">
+                <i class="fas fa-plug display-1 text-primary"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Feature CTA -->
+<section class="feature-cta py-5 bg-light text-center">
+    <div class="container">
+        <h2 class="mb-4" data-aos="fade-up">Ready to Experience These Features?</h2>
+        <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="100">Request a Demo</a>
+    </div>
+</section>
+{% endblock %}
