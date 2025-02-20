@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 40">
+    <style>
+        .logo-text { font-family: Arial, sans-serif; font-weight: bold; }
+    </style>
+    <text x="10" y="30" fill="#2563eb" font-size="24" class="logo-text">CallPlus</text>
+</svg>
