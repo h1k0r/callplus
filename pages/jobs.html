@@ -1,198 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Careers - CallPlus Dialer</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="../css/styles.css" rel="stylesheet">
-    <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Careers - CallPlus Dialer</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- FontAwesome Icons -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Custom Styles -->
+  <link href="../css/styles.css" rel="stylesheet" />
+  <link rel="icon" href="../assets/logo.svg" type="image/svg+xml" />
+
+  <style>
+    /* Additional Professional Styling */
+    body {
+      font-family: 'Inter', sans-serif;
+      padding-top: 70px; /* Ensures the fixed-top navbar doesn't overlap content */
+    }
+
+    .page-header {
+      background-color: #f8f9fa;
+      padding: 60px 0;
+      text-align: center;
+    }
+    .page-header h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .page-header p.lead {
+      color: #6c757d;
+    }
+
+    .section-padding {
+      padding: 60px 0;
+    }
+
+    /* Job Card Styling */
+    .job-card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .job-card h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    .feature-icon {
+      font-size: 2rem;
+      color: #0d6efd; /* Primary Blue */
+    }
+
+    /* Benefits Section Icons */
+    .feature-card .feature-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #0d6efd;
+    }
+
+    /* Footer Styling */
+    .footer {
+      background-color: #f1f1f1;
+      padding: 40px 0 20px;
+      color: #333;
+    }
+    .footer h5 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .footer-links {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-links li {
+      margin-bottom: 0.5rem;
+    }
+    .footer-links a {
+      color: #333;
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    .footer-bottom {
+      border-top: 1px solid #ccc;
+      margin-top: 20px;
+      padding-top: 10px;
+      text-align: center;
+    }
+    .social-links a {
+      display: inline-block;
+      color: #333;
+      margin-right: 10px;
+      font-size: 1.2rem;
+      transition: color 0.2s;
+    }
+    .social-links a:hover {
+      color: #0d6efd;
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
-        <div class="container">
-            <a class="navbar-brand" href="../index.html">
-                <img src="../assets/logo.svg" alt="CallPlus Logo" width="150" height="40">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <img
+          src="../assets/logo.svg"
+          alt="CallPlus Logo"
+          width="150"
+          height="40"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="features.html">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="solutions.html">Solutions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="jobs.html">Careers</a>
+          </li>
+          <li class="nav-item">
+            <!-- Contact link goes to the Google Form -->
+            <a
+              class="nav-link"
+              href="https://forms.gle/RM5yXJrTELSKcWsc9"
+              target="_blank"
+              >Contact</a
+            >
+          </li>
+          <li class="nav-item">
+            <button id="themeToggle" class="theme-toggle btn btn-link">
+              <i class="fas fa-moon"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="solutions.html">Solutions</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="jobs.html">Careers</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item">
-                        <button id="themeToggle" class="theme-toggle">
-                            <i class="fas fa-moon"></i>
-                        </button>
-                    </li>
-                    <li class="nav-item"><a class="btn btn-primary ms-lg-3" href="demo.html">Request Demo</a></li>
-                </ul>
+          </li>
+          <li class="nav-item">
+            <a
+              class="btn btn-primary ms-lg-3"
+              href="demo.html"
+              >Request Demo</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Jobs Header -->
+  <section class="page-header section-padding">
+    <div class="container">
+      <div class="text-center">
+        <h1>Join Our Team</h1>
+        <p class="lead">
+          Be part of our mission to revolutionize call center technology
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Job Listings -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Java Developer Position -->
+        <div class="col-md-6">
+          <div class="job-card">
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <h3 class="mb-2">Java Developer</h3>
+                <span class="badge bg-primary mb-3">Full-time</span>
+              </div>
+              <i class="fas fa-java feature-icon"></i>
             </div>
+            <h4 class="text-primary mb-3">Required Skills:</h4>
+            <ul>
+              <li>Java programming (5+ years experience)</li>
+              <li>JSP (Java Server Pages)</li>
+              <li>MySQL database management</li>
+              <li>Spring Framework</li>
+              <li>RESTful API development</li>
+              <li>Version control (Git)</li>
+            </ul>
+            <h4 class="text-primary mb-3">Responsibilities:</h4>
+            <ul>
+              <li>Develop and maintain Java-based applications</li>
+              <li>Write clean, maintainable, and efficient code</li>
+              <li>Design and implement database schemas</li>
+              <li>Collaborate with cross-functional teams</li>
+              <li>Participate in code reviews</li>
+            </ul>
+            <div class="mt-4">
+              <!-- Apply link goes to the job form -->
+              <a
+                href="https://forms.gle/tKmZwze7d5BT6wC16"
+                class="btn btn-primary"
+                target="_blank"
+                >Apply Now</a
+              >
+            </div>
+          </div>
         </div>
-    </nav>
 
-    <!-- Jobs Header -->
-    <section class="page-header section-padding">
-        <div class="container">
-            <div class="text-center">
-                <h1>Join Our Team</h1>
-                <p class="lead">Be part of our mission to revolutionize call center technology</p>
+        <!-- Custom Feature Developer Position -->
+        <div class="col-md-6">
+          <div class="job-card">
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <h3 class="mb-2">Feature Developer</h3>
+                <span class="badge bg-primary mb-3">Full-time</span>
+              </div>
+              <i class="fas fa-code feature-icon"></i>
             </div>
+            <h4 class="text-primary mb-3">Required Skills:</h4>
+            <ul>
+              <li>Full-stack development experience</li>
+              <li>JavaScript/TypeScript</li>
+              <li>React.js or Angular</li>
+              <li>Node.js</li>
+              <li>API development</li>
+              <li>Cloud services (AWS/Azure)</li>
+            </ul>
+            <h4 class="text-primary mb-3">Responsibilities:</h4>
+            <ul>
+              <li>Develop custom features for CallPlus platform</li>
+              <li>Implement real-time communication features</li>
+              <li>Design and develop user interfaces</li>
+              <li>Optimize application performance</li>
+              <li>Write technical documentation</li>
+            </ul>
+            <div class="mt-4">
+              <!-- Apply link goes to the job form -->
+              <a
+                href="https://forms.gle/tKmZwze7d5BT6wC16"
+                class="btn btn-primary"
+                target="_blank"
+                >Apply Now</a
+              >
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Job Listings -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="row g-4">
-                <!-- Java Developer Position -->
-                <div class="col-md-6">
-                    <div class="job-card feature-card">
-                        <div class="d-flex justify-content-between align-items-start">
-                            <div>
-                                <h3 class="mb-2">Java Developer</h3>
-                                <span class="badge bg-primary mb-3">Full-time</span>
-                            </div>
-                            <i class="fas fa-java feature-icon"></i>
-                        </div>
-                        <h4 class="text-primary mb-3">Required Skills:</h4>
-                        <ul class="feature-list">
-                            <li>Java programming (5+ years experience)</li>
-                            <li>JSP (Java Server Pages)</li>
-                            <li>MySQL database management</li>
-                            <li>Spring Framework</li>
-                            <li>RESTful API development</li>
-                            <li>Version control (Git)</li>
-                        </ul>
-                        <h4 class="text-primary mb-3">Responsibilities:</h4>
-                        <ul class="feature-list">
-                            <li>Develop and maintain Java-based applications</li>
-                            <li>Write clean, maintainable, and efficient code</li>
-                            <li>Design and implement database schemas</li>
-                            <li>Collaborate with cross-functional teams</li>
-                            <li>Participate in code reviews</li>
-                        </ul>
-                        <div class="mt-4">
-                            <a href="contact.html" class="btn btn-primary">Apply Now</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Custom Feature Developer Position -->
-                <div class="col-md-6">
-                    <div class="job-card feature-card">
-                        <div class="d-flex justify-content-between align-items-start">
-                            <div>
-                                <h3 class="mb-2">Feature Developer</h3>
-                                <span class="badge bg-primary mb-3">Full-time</span>
-                            </div>
-                            <i class="fas fa-code feature-icon"></i>
-                        </div>
-                        <h4 class="text-primary mb-3">Required Skills:</h4>
-                        <ul class="feature-list">
-                            <li>Full-stack development experience</li>
-                            <li>JavaScript/TypeScript</li>
-                            <li>React.js or Angular</li>
-                            <li>Node.js</li>
-                            <li>API development</li>
-                            <li>Cloud services (AWS/Azure)</li>
-                        </ul>
-                        <h4 class="text-primary mb-3">Responsibilities:</h4>
-                        <ul class="feature-list">
-                            <li>Develop custom features for CallPlus platform</li>
-                            <li>Implement real-time communication features</li>
-                            <li>Design and develop user interfaces</li>
-                            <li>Optimize application performance</li>
-                            <li>Write technical documentation</li>
-                        </ul>
-                        <div class="mt-4">
-                            <a href="contact.html" class="btn btn-primary">Apply Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- Benefits Section -->
+  <section class="section-padding bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>Why Join Us?</h2>
+        <p class="section-description">
+          We offer competitive benefits and a great work environment
+        </p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="feature-card text-center">
+            <i class="fas fa-medal feature-icon"></i>
+            <h4>Competitive Salary</h4>
+            <p>
+              We offer competitive compensation packages and performance bonuses
+            </p>
+          </div>
         </div>
-    </section>
-
-    <!-- Benefits Section -->
-    <section class="section-padding bg-light">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2>Why Join Us?</h2>
-                <p class="section-description">We offer competitive benefits and a great work environment</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="feature-card text-center">
-                        <i class="fas fa-medal feature-icon"></i>
-                        <h4>Competitive Salary</h4>
-                        <p>We offer competitive compensation packages and performance bonuses</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-card text-center">
-                        <i class="fas fa-laptop-house feature-icon"></i>
-                        <h4>Remote Work</h4>
-                        <p>Flexible work arrangements with remote options available</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-card text-center">
-                        <i class="fas fa-graduation-cap feature-icon"></i>
-                        <h4>Learning & Growth</h4>
-                        <p>Continuous learning opportunities and career development</p>
-                    </div>
-                </div>
-            </div>
+        <div class="col-md-4">
+          <div class="feature-card text-center">
+            <i class="fas fa-laptop-house feature-icon"></i>
+            <h4>Remote Work</h4>
+            <p>Flexible work arrangements with remote options available</p>
+          </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>About CallPlus</h5>
-                    <p>Revolutionary call center solution designed to enhance productivity and customer engagement.</p>
-                </div>
-                <div class="col-md-2">
-                    <h5>Quick Links</h5>
-                    <ul class="footer-links">
-                        <li><a href="features.html">Features</a></li>
-                        <li><a href="solutions.html">Solutions</a></li>
-                        <li><a href="jobs.html">Careers</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h5>Contact</h5>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-envelope"></i> info@callplus.com</li>
-                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h5>Follow Us</h5>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 CallPlus Dialer. All rights reserved.</p>
-            </div>
+        <div class="col-md-4">
+          <div class="feature-card text-center">
+            <i class="fas fa-graduation-cap feature-icon"></i>
+            <h4>Learning & Growth</h4>
+            <p>Continuous learning opportunities and career development</p>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/main.js"></script>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>About CallPlus</h5>
+          <p>
+            Revolutionary call center solution designed to enhance productivity
+            and customer engagement.
+          </p>
+        </div>
+        <div class="col-md-2">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="features.html">Features</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="jobs.html">Careers</a></li>
+            <!-- Updated Contact to the Google Form -->
+            <li>
+              <a href="https://forms.gle/RM5yXJrTELSKcWsc9" target="_blank"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Contact</h5>
+          <ul class="footer-links">
+            <li>
+              <i class="fas fa-envelope"></i> callplus.in@gmail.com
+            </li>
+            <li>
+              <i class="fas fa-phone"></i> +91 8406831511, +91 6207123633
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Follow Us</h5>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 CallPlus Dialer. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  ></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>
