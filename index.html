@@ -15,16 +15,18 @@
     content="CallPlus, CallPlus Dialer, Predictive Dialer, India No. 1 Dialer, Call Center Software, Outbound Calling, CRM Integration, Automated Dialer, Sales Dialer, Best Dialer India, Cloud Dialer, Asterisk Dialer, VoIP Solutions, Business Solutions India, Digital India, Customer Engagement, CallPlus Experience, Power Of CallPlus, CallPlus Revolution"
   />
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-X0ZKJPR89G"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+    function gtag() {
+      dataLayer.push(arguments);
+    }
     gtag('js', new Date());
     gtag('config', 'G-X0ZKJPR89G');
   </script>
 
-  <!-- Social Media Hashtags -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta
     name="twitter:title"
@@ -71,7 +73,8 @@
   <style>
     /* Ensure the hero section is not hidden behind the fixed navbar */
     body {
-      padding-top: 70px; /* Adjust if your navbar is taller or shorter */
+      padding-top: 70px; /* Adjust if your navbar is taller/shorter */
+      font-family: 'Inter', sans-serif;
     }
   </style>
 </head>
@@ -128,14 +131,15 @@
   </nav>
 
   <!-- Hero Section -->
-  <section id="hero" class="hero-section text-center text-white bg-primary py-5">
+  <!-- Changed bg to light and text color to blue/dark to ensure visibility -->
+  <section id="hero" class="hero-section text-center py-5" style="background-color: #f8f9fa;">
     <div class="container">
-      <h1 class="display-4">Revolutionize Your Calling Experience</h1>
-      <p class="lead">
+      <h1 class="display-4 text-primary">Revolutionize Your Calling Experience</h1>
+      <p class="lead text-dark">
         Boost productivity and enhance customer engagement with CallPlus Dialer.
       </p>
-      <a href="pages/demo.html" class="btn btn-light btn-lg me-3">Get Started</a>
-      <a href="pages/features.html" class="btn btn-outline-light btn-lg"
+      <a href="pages/demo.html" class="btn btn-primary btn-lg me-3">Get Started</a>
+      <a href="pages/features.html" class="btn btn-outline-primary btn-lg"
         >Learn More</a
       >
     </div>
@@ -180,12 +184,46 @@
     </div>
   </section>
 
+  <!-- Additional Info Section -->
+  <!-- Highlights low cost, no sound issues, VAPT report, SBI specialization, etc. -->
+  <section id="additional-info" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Why Choose CallPlus Dialer?</h2>
+      <ul class="list-unstyled fs-5">
+        <li class="mb-2">
+          <i class="fas fa-check text-primary me-2"></i>
+          Low cost across all of India
+        </li>
+        <li class="mb-2">
+          <i class="fas fa-check text-primary me-2"></i>
+          No sound issues
+        </li>
+        <li class="mb-2">
+          <i class="fas fa-check text-primary me-2"></i>
+          Custom features as per your requirements
+        </li>
+        <li class="mb-2">
+          <i class="fas fa-check text-primary me-2"></i>
+          VAPT report for dialer software
+        </li>
+        <li class="mb-2">
+          <i class="fas fa-check text-primary me-2"></i>
+          Highly specialized for SBI to fulfill all requirements at low cost
+        </li>
+      </ul>
+      <p class="text-center fs-5">
+        Experience the power of CallPlus Dialer—an optimized, cost-effective
+        solution trusted by leading banks like SBI and beyond!
+      </p>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="footer bg-dark text-white py-4">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <p>&copy; 2024 CallPlus Dialer. All rights reserved.</p>
+          <p class="mb-0">&copy; 2024 CallPlus Dialer. All rights reserved.</p>
         </div>
         <div class="col-md-6 text-end">
           <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
